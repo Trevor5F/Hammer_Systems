@@ -1,0 +1,38 @@
+POST http://127.0.0.1:8000/auth/
+Accept: application/json
+Content-Type: application/json
+
+{
+    "phone_number": "+79123456781"
+}
+
+###
+
+PATCH http://127.0.0.1:8000/auth-code-check/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "phone_number": "+79123456783",
+  "auth_code": "3959"
+}
+
+###
+
+POST http://127.0.0.1:8000/users/3/
+Accept: application/json
+Content-Type: application/json
+
+{
+    "invite_code": "CQqh65"
+}
+
+###
+
+GET http://127.0.0.1:8000/user-profile/1/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/users/1/
+Accept: application/json
